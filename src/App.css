@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  background:linear-gradient(to bottom,rgba(36, 36, 71, 0.39),rgba(2, 27, 2, 0.308),rgba(48, 8, 5, 0.356));
   min-height: 100vh;
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.mainParent{
+  width: 350px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: -4px 4px 4px rgba(96, 96, 252, 0.39);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.result{
+  border: 2px solid rgb(158, 88, 113);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(96, 96, 252, 0.39);
+  font-weight: bolder;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.items{
+  display: grid;
+  margin-top: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "clear clean divide multi"
+  "no7 no8 no9 plus"
+  "no4 no5 no6 minus"
+  "no1 no2 no3 ans"
+  "dott no0 no0 ans"
+  ;
+}
+
+.items > button{
+  background:rgb(82, 82, 82);
+  color: floralwhite;
+  min-height: 60px;
+  border: 2px solid rgb(158, 88, 113);
+  /* box-shadow: 0px 4px 4px rgba(129, 212, 218, 0.534); */
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+
+.items > button:hover{
+  cursor: pointer;
+  background: rgb(224, 253, 255);
+  color: black;
+}
+
+
+.clear{
+  grid-area: clear;}
+.clean{
+  grid-area: clean;}
+.divide{
+  grid-area: divide;}
+.multi{
+  grid-area: multi;}
+.plus{
+  grid-area: plus;}
+.minus{
+  grid-area: minus;}
+.no-9{
+  grid-area: no9;}
+.no-8{
+  grid-area: no8;}
+.no-7{
+  grid-area: no7;}
+.no-6{
+  grid-area: no6;}
+.no-5{
+  grid-area: no5;}
+.no-4{
+  grid-area: no4;}
+.no-3{
+  grid-area: no3;}
+.no-2{
+  grid-area: no2;}
+.no-1{
+  grid-area: no1;}
+.no-0{
+  grid-area: no0;}
+.dott{
+  grid-area: dott;}
+.ans{
+  grid-area: ans;}
+
+.prank{
+  animation: shake 0.3s ease-in;
+}
+
+@keyframes shake{
+  0%{
+      transform: translateX(10px);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+      transform: translateX(-10px);
   }
+  75%{
+      transform: translateX(10px);
+  }
+  100%{
+      transform: translateX(-10px);
+  }
+  
 }
